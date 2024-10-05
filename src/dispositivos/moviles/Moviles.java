@@ -4,10 +4,11 @@
  */
 package dispositivos.moviles;
 
+import dispositivos.Dispositivo;
 /**
  *
  * @author david
  */
-public class Moviles {
+public class Moviles extends Dispositivo {
     
 }
