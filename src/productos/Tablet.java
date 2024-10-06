@@ -4,10 +4,12 @@
  */
 package productos;
 
+import dispositivos.tipos.DispositivoMovil;
+
 /**
  *
  * @author david
  */
-public class Tablet {
+public class Tablet extends DispositivoMovil {
     
 }

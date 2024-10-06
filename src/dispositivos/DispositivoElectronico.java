@@ -18,7 +18,7 @@ public abstract class DispositivoElectronico implements Dispositivo {
     protected String marca;
     protected String procesador;
     protected String gama;
-    protected String so;
+    protected String sistemaOperativo;
     
     
     protected DispositivoElectronico(){
@@ -31,5 +31,13 @@ public abstract class DispositivoElectronico implements Dispositivo {
     
     public int consultarID(){
         return id;
+    }
+    
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
