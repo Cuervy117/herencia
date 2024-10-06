@@ -8,6 +8,28 @@ package dispositivos;
  *
  * @author david
  */
-public class DispositivoElectronico implements Dispositivo {
+public abstract class DispositivoElectronico implements Dispositivo {
+    protected int pantalla;
+    protected int ram;
+    protected int almacenamiento;
+    private final int id;
     
+    protected String nombre;
+    protected String marca;
+    protected String procesador;
+    protected String gama;
+    protected String so;
+    
+    
+    protected DispositivoElectronico(){
+        this.id = this.hashCode();
+    }
+    
+    public String consultarDatos(){
+        return "papu";
+    }
+    
+    public int consultarID(){
+        return id;
+    }
 }

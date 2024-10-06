@@ -9,5 +9,8 @@ package dispositivos;
  * @author david
  */
 public interface Dispositivo {
-    
+    void encender();
+    void apagar();
+    void reparar();
+    void reiniciar();
 }
