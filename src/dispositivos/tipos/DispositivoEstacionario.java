@@ -10,6 +10,11 @@ import dispositivos.DispositivoElectronico;
  *
  * @author david
  */
-public class DispositivoEstacionario extends DispositivoElectronico {
+public abstract class DispositivoEstacionario extends DispositivoElectronico {
+    protected String instalacion;
     
+   @Override
+   public String consultarDatos(){
+       return super.consultarDatos();
+   }
 }
