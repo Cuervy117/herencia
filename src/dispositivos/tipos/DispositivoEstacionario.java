@@ -22,5 +22,9 @@ public abstract class DispositivoEstacionario extends DispositivoElectronico {
         return instalacion;
     }
     
-    
+    @Override
+    public void imprimirDatos(){
+        super.imprimirDatos();
+        System.out.println("Tipo de instalación: " + instalacion);
+    }
 }

@@ -3,15 +3,23 @@ package clientes;
 import java.util.ArrayList;
 import java.util.List;
 import dispositivos.DispositivoElectronico;
+import inventario.Inventario;
 
 public class Estudiante extends Comprador {
+    // propuesta David
+    
+    
+    
+    
+    // termina propuesta
     private List<DispositivoElectronico> descuentos;
     private int descuento;
+    
 
     public Estudiante(int saldo){
         super(saldo);
         this.descuentos = new ArrayList<>();
-        this.descuento = 5; // Que tengan 5 por ciento o ahí vemos
+        this.descuento = 5; // Que tengan 5 por ciento o ahí vemos. 
     }
 
     public void mostrarDescuentos(){

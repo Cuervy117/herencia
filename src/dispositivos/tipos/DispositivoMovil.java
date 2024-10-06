@@ -13,15 +13,49 @@ import dispositivos.DispositivoElectronico;
 public abstract class DispositivoMovil extends DispositivoElectronico {
     protected int autonomia;
     protected int peso;
-    
     protected String dimensiones;
     protected String color;
-    
     protected boolean aprueba_de_agua_polvo;
+
+    public DispositivoMovil(int autonomia, int peso, String dimensiones, String color, boolean aprueba_de_agua_polvo, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
+        super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
+        this.autonomia = autonomia;
+        this.peso = peso;
+        this.dimensiones = dimensiones;
+        this.color = color;
+        this.aprueba_de_agua_polvo = aprueba_de_agua_polvo;
+    }
+    
+    // <editor-fold defaultstate="collapsed" desc="Getters">
+    public int getAutonomia() {
+        return autonomia;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public String getDimensiones() {
+        return dimensiones;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public boolean isAprueba_de_agua_polvo() {
+        return aprueba_de_agua_polvo;
+    }
+    // </editor-fold>
     
     @Override
-    public String consultarDatos(){
-        super.consultarDatos();
-        return "papu";
+    public void imprimirDatos(){
+        super.imprimirDatos();
+        System.out.println("Autonomia de " + autonomia + " horas");
+        System.out.println("Peso: " + peso);
+        System.out.println("Dimensiones: " + dimensiones);
+        System.out.println("Color: " + color);
+        System.out.println(aprueba_de_agua_polvo == true? "Aprueba de agua y polvo" : "No es aprueba de agua y polvo");
     }
+    
 }
