@@ -6,9 +6,9 @@ public class Comprador {
     private Carrito carrito;
     private int saldo;
     //private ArrayList<Carrito> tickets;
-    public Comprador(int saldo, DispositivoElectronico producto){
+    public Comprador(int saldo){
         this.saldo = saldo;
-        this.carrito = new Carrito(producto);
+        this.carrito = new Carrito();
     }
  
     public void setCarrito(Carrito carrito) {

@@ -8,11 +8,10 @@ public class Carrito {
     private LinkedHashMap<DispositivoElectronico, Integer> tablaPrecios;
     private int monto;
     
-    public Carrito(DispositivoElectronico producto){
+    public Carrito(){
         this.monto = 0;
         this.productos = new ArrayList<>();
         this.tablaPrecios = new LinkedHashMap<>();
-        this.productos.add(producto);
     }
 
     public ArrayList<DispositivoElectronico> getProductos() {
@@ -40,9 +39,8 @@ public class Carrito {
     }
 
     public void verCarrito(){
-        tablaPrecios.forEach((dispositivo, precio) -> System.out.println(dispositivo.getNombre() + " - " + precio) );
+        tablaPrecios.forEach((dispositivo, precio) -> System.out.println(dispositivo.getNombre() + " - " + precio + " $") );
     }
-
 
 
 
