@@ -12,9 +12,15 @@ import dispositivos.DispositivoElectronico;
  */
 public abstract class DispositivoEstacionario extends DispositivoElectronico {
     protected String instalacion;
+
+    public DispositivoEstacionario(int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo, String instalacion) {
+        super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
+        this.instalacion = instalacion;
+    }
     
-   @Override
-   public String consultarDatos(){
-       return super.consultarDatos();
-   }
+    public String getInstalacion(){
+        return instalacion;
+    }
+    
+    
 }

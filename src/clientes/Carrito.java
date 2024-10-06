@@ -7,6 +7,7 @@ public class Carrito {
     private ArrayList<DispositivoElectronico> productos;
     private LinkedHashMap<DispositivoElectronico, Integer> tablaPrecios;
     private int monto;
+    
     public Carrito(DispositivoElectronico producto){
         this.monto = 0;
         this.productos = new ArrayList<>();
