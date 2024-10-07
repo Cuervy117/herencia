@@ -1,4 +1,6 @@
 package archivo;
+import dispositivos.DispositivoElectronico;
+import inventario.Inventario;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,14 +8,11 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
-import dispositivos.DispositivoElectronico;
-import inventario.Inventario;
 import productos.*;
 
 public class Archivo{
 
-public static void almacenarProductos(Inventario inventario) {
+public static void almacenarProductos(Inventario inventario) throws IOException {
         try {
             Path packageActual = Paths.get(Archivo.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getParent();
             Path directorio = packageActual.resolve("archivo");
@@ -58,29 +57,27 @@ public static void almacenarProductos(Inventario inventario) {
                     // Crear un nuevo producto según su tipo
                     DispositivoElectronico nuevoProducto = null;
                     nuevoProducto = switch (nombre) {
-                        case "CamaraDigital" -> new CamaraDigital(autonomia, peso, dimensiones, color, apruebaDeAguaPolvo, 
-                                pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
-                        case "Computadora" -> new Computadora(pantalla, ram, almacenamiento, nombre, marca, procesador, 
+                        case "CámaraDigital" -> new CamaraDigital((int)precio, autonomia, (int)peso, dimensiones, color, apruebaDeAguaPolvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
+                        case "Computadora" -> new Computadora((int) precio, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
+                        case "Consola" -> new Consola((int)precio, pantalla, ram, almacenamiento, nombre, marca, procesador, 
                                 gama, sistemaOperativo, instalacion);
-                        case "Consola" -> new Consola(pantalla, ram, almacenamiento, nombre, marca, procesador, 
-                                gama, sistemaOperativo, instalacion);
-                        case "ConsolaPortable" -> new ConsolaPortable(autonomia, peso, dimensiones, color, apruebaDeAguaPolvo, 
+                        case "ConsolaPortable" -> new ConsolaPortable((int)precio, autonomia,(int) peso, dimensiones, color, apruebaDeAguaPolvo, 
                                 pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
-                        case "Impresora" -> new Impresora(pantalla, ram, almacenamiento, nombre, marca, procesador, 
+                        case "Impresora" -> new Impresora((int) precio, pantalla, ram, almacenamiento, nombre, marca, procesador, 
                                 gama, sistemaOperativo, instalacion);
-                        case "Laptop" -> new Laptop(autonomia, peso, dimensiones, color, apruebaDeAguaPolvo, 
+                        case "Laptop" -> new Laptop((int) precio, autonomia, (int)peso, dimensiones, color, apruebaDeAguaPolvo, 
                                 pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
-                        case "ReproductorVideo" -> new ReproductorVideo(pantalla, ram, almacenamiento, nombre, marca, 
+                        case "ReproductorVideo" -> new ReproductorVideo((int) precio, pantalla, ram, almacenamiento, nombre, marca, 
                                 procesador, gama, sistemaOperativo, instalacion);
-                        case "SistemaAudio" -> new SistemaAudio(pantalla, ram, almacenamiento, nombre, marca, 
+                        case "SistemaAudio" -> new SistemaAudio((int) precio, pantalla, ram, almacenamiento, nombre, marca, 
                                 procesador, gama, sistemaOperativo, instalacion);
-                        case "Smartphone" -> new Smartphone(autonomia, peso, dimensiones, color, apruebaDeAguaPolvo, 
+                        case "Smartphone" -> new Smartphone((int) precio, autonomia,(int) peso, dimensiones, color, apruebaDeAguaPolvo, 
                                 pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
-                        case "Smartwatch" -> new Smartwatch(autonomia, peso, dimensiones, color, apruebaDeAguaPolvo, 
+                        case "Smartwatch" -> new Smartwatch((int) precio,autonomia, (int)peso, dimensiones, color, apruebaDeAguaPolvo, 
                                 pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
-                        case "Tablet" -> new Tablet(autonomia, peso, dimensiones, color, apruebaDeAguaPolvo, 
+                        case "Tablet" -> new Tablet((int)precio, autonomia, (int)peso, dimensiones, color, apruebaDeAguaPolvo, 
                                 pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
-                        case "Television" -> new Television(pantalla, ram, almacenamiento, nombre, marca, procesador, 
+                        case "Television" -> new Television((int)precio,pantalla, ram, almacenamiento, nombre, marca, procesador, 
                                 gama, sistemaOperativo, instalacion);
                         default -> {
                             System.out.println("Tipo de producto desconocido para: " + nombre);
@@ -107,8 +104,10 @@ public static void almacenarProductos(Inventario inventario) {
     }
     
     
-    public static void main(String[] args) {
-        almacenarProductos();
+    public static void main(String[] args)throws IOException {
+        Inventario inventario = new Inventario();
+        almacenarProductos(inventario);
+        inventario.getProductos().forEach((id, producto )-> System.out.println(id + " - " + producto.getNombre()));
     }
 
 
