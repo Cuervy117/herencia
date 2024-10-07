@@ -13,9 +13,11 @@ import dispositivos.tipos.DispositivoMovil;
 public class CamaraDigital extends DispositivoMovil {
     
     
-    public CamaraDigital(int autonomia, int peso, String dimensiones, String color, boolean aprueba_de_agua_polvo, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
-        super(autonomia, peso, dimensiones, color, aprueba_de_agua_polvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
-    }
+    public CamaraDigital(int autonomia, int peso, String dimensiones, String color, boolean apruebaDeAguaPolvo, 
+    int pantalla, int ram, int almacenamiento, String nombre, String marca, 
+    String procesador, String gama, String sistemaOperativo) {
+super(autonomia, peso, dimensiones, color, apruebaDeAguaPolvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
+}
 
     
     @Override
