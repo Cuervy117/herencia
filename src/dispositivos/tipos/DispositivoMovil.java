@@ -35,7 +35,7 @@ public abstract class DispositivoMovil extends DispositivoElectronico {
         return autonomia;
     }
 
-    public int getPeso() {
+    public float getPeso() {
         return peso;
     }
 
