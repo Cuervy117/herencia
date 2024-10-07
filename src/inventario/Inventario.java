@@ -1,11 +1,11 @@
+package inventario;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package inventario;
-import productos.*;
-import java.util.HashMap;
 import dispositivos.DispositivoElectronico;
+import java.util.HashMap;
+import productos.*;
 /**
  *
  * @author david

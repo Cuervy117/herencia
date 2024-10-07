@@ -1,25 +1,23 @@
-ID\tNombre\tMarca\tProcesador\tGama\tSistema Operativo\tPantalla\tRAM\tAlmacenamiento\tPrecio\tFuncional\tAutonomia\tPeso\tDimensiones\tColor\tAprueba Agua Polvo\tInstalacion
-1\tCamaraDigital A\tCanon\tDIGIC X\tProfesional\tN/A\t3.0\tN/A\t64\t1199.99\ttrue\t10\t0.5\t5.0x3.0x2.0\tNegro\ttrue\t
-2\tCamaraDigital B\tNikon\tEXPEED 6\tAficionado\tN/A\t2.5\tN/A\t32\t799.99\ttrue\t8\t0.4\t4.5x2.8x1.8\tPlateado\ttrue\t
-3\tComputadora A\tHP\tIntel i5\tOficina\tWindows\t24\t8\t256\t999.99\ttrue\tN/A\t8\t20.0x15.0x8.0\tNegro\tN/A\ttrue
-4\tComputadora B\tApple\tM1\tCreativo\tmacOS\t27\t16\t512\t1999.99\ttrue\tN/A\t10\t25.0x20.0x7.0\tBlanco\tN/A\ttrue
-5\tConsola A\tSony\tCustom AMD\tGaming\tN/A\tN/A\tN/A\t1024\t499.99\ttrue\tN/A\t3.3\t12.0x10.0x3.0\tNegro\tN/A\ttrue
-6\tConsola B\tMicrosoft\tCustom AMD\tGaming\tN/A\tN/A\tN/A\t1024\t499.99\ttrue\tN/A\t4.5\t15.0x12.0x5.0\tBlanco\tN/A\ttrue
-7\tConsolaPortable A\tNintendo\tCustom NVIDIA\tGaming\tN/A\t6.2\t4\t64\t299.99\ttrue\t9\t0.4\t9.4x4.0x0.6\tRojo\ttrue\t
-8\tConsolaPortable B\tSony\tCustom AMD\tGaming\tN/A\t5.5\t4\t128\t349.99\ttrue\t8\t0.5\t8.9x4.2x0.7\tNegro\ttrue\t
-9\tImpresora A\tCanon\tN/A\tOficina\tN/A\tN/A\tN/A\tN/A\t199.99\ttrue\tN/A\t8.0\t15.0x7.0x5.0\tBlanco\tN/A\ttrue
-10\tImpresora B\tBrother\tN/A\tOficina\tN/A\tN/A\tN/A\tN/A\t149.99\ttrue\tN/A\t6.5\t14.0x6.5x4.5\tGris\tN/A\ttrue
-11\tLaptop A\tDell\tIntel i7\tGaming\tWindows\t15.6\t16\t512\t1299.99\ttrue\t6\t2.5\t14.0x9.0x0.8\tNegro\ttrue\t
-12\tLaptop B\tApple\tM1 Pro\tProfesional\tmacOS\t14\t16\t1024\t2399.99\ttrue\t10\t1.4\t12.5x8.7x0.6\tGris\ttrue\t
-13\tReproductorVideo A\tSamsung\tN/A\tEntretenimiento\tN/A\tN/A\tN/A\tN/A\t299.99\ttrue\tN/A\t2.5\t10.0x6.0x1.5\tNegro\tN/A\ttrue
-14\tReproductorVideo B\tLG\tN/A\tEntretenimiento\tN/A\tN/A\tN/A\tN/A\t249.99\ttrue\tN/A\t2.2\t9.5x5.8x1.3\tBlanco\tN/A\ttrue
-15\tSistemaAudio A\tBose\tN/A\tProfesional\tN/A\tN/A\tN/A\tN/A\t499.99\ttrue\tN/A\t4.5\t10.0x6.0x6.0\tNegro\tN/A\ttrue
-16\tSistemaAudio B\tSony\tN/A\tDoméstico\tN/A\tN/A\tN/A\tN/A\t349.99\ttrue\tN/A\t5.0\t9.0x5.5x5.5\tPlateado\tN/A\ttrue
-17\tSmartphone A\tSamsung\tExynos\tPremium\tAndroid\t6.1\t8\t128\t799.99\ttrue\t24\t0.2\t6.2x3.0x0.3\tBlanco\ttrue\t
-18\tSmartphone B\tApple\tA14 Bionic\tHigh-end\tiOS\t6.1\t6\t256\t999.99\ttrue\t20\t0.2\t6.0x2.9x0.3\tNegro\ttrue\t
-19\tSmartwatch A\tApple\tS7\tHigh-end\twatchOS\t1.9\tN/A\t32\t399.99\ttrue\t18\t0.05\t1.8x1.6x0.4\tRojo\ttrue\t
-20\tSmartwatch B\tSamsung\tExynos W920\tHigh-end\tWear OS\t1.4\tN/A\t16\t299.99\ttrue\t24\t0.03\t1.7x1.5x0.4\tNegro\ttrue\t
-21\tTablet A\tApple\tA12 Bionic\tHigh-end\tiPadOS\t10.2\t3\t256\t499.99\ttrue\t10\t0.5\t7.5x4.7x0.3\tRosado\ttrue\t
-22\tTablet B\tSamsung\tSnapdragon\tMid-range\tAndroid\t10.4\t4\t128\t329.99\ttrue\t12\t0.45\t7.8x5.0x0.3\tAzul\ttrue\t
-23\tTelevision A\tSony\tN/A\tEntertainment\tAndroid TV\t55\tN/A\tN/A\t1499.99\ttrue\tN/A\t20.0\t55.0x30.0x2.5\tNegro\tN/A\ttrue
-24\tTelevision B\tLG\tN/A\tEntertainment\twebOS\t65\tN/A\tN/A\t1999.99\ttrue\tN/A\t23.0\t65.0x35.0x2.8\tNegro\tN/A\ttrue
+ID	Nombre					Marca			Procesador		Gama		SistemaOperativo		Funcional	Pantalla	RAM	Almacenamiento	Precio	Autonomía	Peso	Dimensiones	Color	Aprueba_de_Agua_Polvo	Instalación
+1	Cámara Digital Pro			Canon			DIGIC 8		Alta		Windows				true		20	8	256		1200.00	0	0	0	Negro	false			0
+2	Cámara Digital Compacta		Nikon			Expeed 6		Media		Windows				true		16	4	128		600.00	0	0	0	Rojo	false			0
+3	Computadora Gamer			Dell			Intel i7		Alta		Windows				true		27	16	1024		1500.00	0	0	0	N/A	false			0
+4	Computadora de Oficina		HP				Intel i5		Media		Windows				true		22	8	512		800.00	0	0	0	N/A	false			0
+5	Consola de Videojuegos		PlayStation		AMD Ryzen		Alta		PlayStation OS			true		20	8	512		499.00	0	0	0	N/A	false			0
+6	Consola Retro				Nintendo		Custom CPU		Baja		Nintendo OS			true		15	4	256		299.00	0	0	0	N/A	false			0
+7	Consola Portátil			Nintendo Switch	NVIDIA			Media		Nintendo OS			true		7	4	64		299.00	6	0.4	10x24	Negro	false			0
+8	Consola Portátil Avanzada	GPD Win		Inteligent i5		Alta		Windows				true		7	8	512		599.00	6	0.8	8x25	Negro	false			0
+9	Impresora Láser			Brother			HL-L2350DW		Media		N/A				true		0	0	0		150.00	0	0	0	N/A	false			0
+10	Impresora de Inyección		Canon			PIXMA			Baja		N/A				true		0	0	0		100.00	0	0	0	N/A	false			0
+11	Reproductor de Video		Sony			Blu-ray		Alta		N/A				true		0	0	0		250.00	0	0	0	N/A	false			0
+12	Reproductor de Video Antiguo	Samsung		DVD			Baja		N/A				true		0	0	0		50.00	0	0	0	N/A	false			0
+13	Laptop Gamer				ASUS			Intel i9		Alta		Windows				true		15	32	2048		2500.00	5	2.5	35x25	Negro	false			0
+14	Laptop de Oficina			Lenovo			Intel i5		Media		Windows				true		14	16	512		1200.00	8	1.5	30x20	Gris	false			0
+15  Smartphone Avanzado		Apple			A15			Alta		iOS				true		6	6	256		999.00	20	0.2	15x7	Blanco	true			0
+16	Smartphone Económico		Samsung			Exynos		Media		Android				true		6	4	128		399.00	15	0.3	15x7	Negro	true			0
+17	Smartwatch Deportivo		Garmin			Forerunner		Alta		N/A				true		0	0	0		350.00	10	0.05	5x5	Negro	true			0
+18	Smartwatch Clásico			Apple			Watch Series 7	Alta		N/A				true		0	0	0		399.00	18	0.03	4x4	Blanco	true			0
+19	Tablet Educativa			Samsung			Exynos		Media		Android				true		10	4	128		299.00	12	0.5	25x15	Negro	false			0
+20	Tablet Profesional			Apple			A14			Alta		iOS				true		12	8	256		799.00	12	0.4	27x18	Blanco	false			0
+21	Televisión 4K				Samsung			QLED			Alta		Tizen				true		55	0	0		800.00	0	15	123x78	Negro	false			0
+22	Televisión HD				LG				LED			Media		webOS				true		43	0	0		500.00	0	10	98x58	Gris	false			0
