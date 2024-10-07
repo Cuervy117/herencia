@@ -1,23 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package clientes;
-
-import java.util.Scanner;
 
 import inventario.Inventario;
 
-public class Vip extends Comprador{
-    public Vip(int saldo){
+/**
+ *
+ * @author david
+ */
+public class VIP extends Comprador {
+    
+    public VIP(int saldo) {
         super(saldo);
+        productos.putAll(Inventario.getInventario().getProductosVIP());
     }
-
-    @Override
-    public void mostrarExclusivos(Inventario inventario) {
-        super.mostrarExclusivos(inventario);
-        System.out.println("6) Camaras Digitales");
-        System.out.println("7) Consolas Portables");
-        System.out.println("8) Reproductores de video");
-        System.out.println("9) Sistemas de audio");
-        System.out.println("10) Smar Watches");
-        System.out.println("11) Televisiones");
-        System.out.println("Presione 0 para salir");
-    }
+    
 }
