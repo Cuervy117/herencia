@@ -1,0 +1,25 @@
+ID\tNombre\tMarca\tProcesador\tGama\tSistema Operativo\tPantalla\tRAM\tAlmacenamiento\tPrecio\tFuncional\tAutonomia\tPeso\tDimensiones\tColor\tAprueba Agua Polvo\tInstalacion
+1\tCamaraDigital A\tCanon\tDIGIC X\tProfesional\tN/A\t3.0\tN/A\t64\t1199.99\ttrue\t10\t0.5\t5.0x3.0x2.0\tNegro\ttrue\t
+2\tCamaraDigital B\tNikon\tEXPEED 6\tAficionado\tN/A\t2.5\tN/A\t32\t799.99\ttrue\t8\t0.4\t4.5x2.8x1.8\tPlateado\ttrue\t
+3\tComputadora A\tHP\tIntel i5\tOficina\tWindows\t24\t8\t256\t999.99\ttrue\tN/A\t8\t20.0x15.0x8.0\tNegro\tN/A\ttrue
+4\tComputadora B\tApple\tM1\tCreativo\tmacOS\t27\t16\t512\t1999.99\ttrue\tN/A\t10\t25.0x20.0x7.0\tBlanco\tN/A\ttrue
+5\tConsola A\tSony\tCustom AMD\tGaming\tN/A\tN/A\tN/A\t1024\t499.99\ttrue\tN/A\t3.3\t12.0x10.0x3.0\tNegro\tN/A\ttrue
+6\tConsola B\tMicrosoft\tCustom AMD\tGaming\tN/A\tN/A\tN/A\t1024\t499.99\ttrue\tN/A\t4.5\t15.0x12.0x5.0\tBlanco\tN/A\ttrue
+7\tConsolaPortable A\tNintendo\tCustom NVIDIA\tGaming\tN/A\t6.2\t4\t64\t299.99\ttrue\t9\t0.4\t9.4x4.0x0.6\tRojo\ttrue\t
+8\tConsolaPortable B\tSony\tCustom AMD\tGaming\tN/A\t5.5\t4\t128\t349.99\ttrue\t8\t0.5\t8.9x4.2x0.7\tNegro\ttrue\t
+9\tImpresora A\tCanon\tN/A\tOficina\tN/A\tN/A\tN/A\tN/A\t199.99\ttrue\tN/A\t8.0\t15.0x7.0x5.0\tBlanco\tN/A\ttrue
+10\tImpresora B\tBrother\tN/A\tOficina\tN/A\tN/A\tN/A\tN/A\t149.99\ttrue\tN/A\t6.5\t14.0x6.5x4.5\tGris\tN/A\ttrue
+11\tLaptop A\tDell\tIntel i7\tGaming\tWindows\t15.6\t16\t512\t1299.99\ttrue\t6\t2.5\t14.0x9.0x0.8\tNegro\ttrue\t
+12\tLaptop B\tApple\tM1 Pro\tProfesional\tmacOS\t14\t16\t1024\t2399.99\ttrue\t10\t1.4\t12.5x8.7x0.6\tGris\ttrue\t
+13\tReproductorVideo A\tSamsung\tN/A\tEntretenimiento\tN/A\tN/A\tN/A\tN/A\t299.99\ttrue\tN/A\t2.5\t10.0x6.0x1.5\tNegro\tN/A\ttrue
+14\tReproductorVideo B\tLG\tN/A\tEntretenimiento\tN/A\tN/A\tN/A\tN/A\t249.99\ttrue\tN/A\t2.2\t9.5x5.8x1.3\tBlanco\tN/A\ttrue
+15\tSistemaAudio A\tBose\tN/A\tProfesional\tN/A\tN/A\tN/A\tN/A\t499.99\ttrue\tN/A\t4.5\t10.0x6.0x6.0\tNegro\tN/A\ttrue
+16\tSistemaAudio B\tSony\tN/A\tDoméstico\tN/A\tN/A\tN/A\tN/A\t349.99\ttrue\tN/A\t5.0\t9.0x5.5x5.5\tPlateado\tN/A\ttrue
+17\tSmartphone A\tSamsung\tExynos\tPremium\tAndroid\t6.1\t8\t128\t799.99\ttrue\t24\t0.2\t6.2x3.0x0.3\tBlanco\ttrue\t
+18\tSmartphone B\tApple\tA14 Bionic\tHigh-end\tiOS\t6.1\t6\t256\t999.99\ttrue\t20\t0.2\t6.0x2.9x0.3\tNegro\ttrue\t
+19\tSmartwatch A\tApple\tS7\tHigh-end\twatchOS\t1.9\tN/A\t32\t399.99\ttrue\t18\t0.05\t1.8x1.6x0.4\tRojo\ttrue\t
+20\tSmartwatch B\tSamsung\tExynos W920\tHigh-end\tWear OS\t1.4\tN/A\t16\t299.99\ttrue\t24\t0.03\t1.7x1.5x0.4\tNegro\ttrue\t
+21\tTablet A\tApple\tA12 Bionic\tHigh-end\tiPadOS\t10.2\t3\t256\t499.99\ttrue\t10\t0.5\t7.5x4.7x0.3\tRosado\ttrue\t
+22\tTablet B\tSamsung\tSnapdragon\tMid-range\tAndroid\t10.4\t4\t128\t329.99\ttrue\t12\t0.45\t7.8x5.0x0.3\tAzul\ttrue\t
+23\tTelevision A\tSony\tN/A\tEntertainment\tAndroid TV\t55\tN/A\tN/A\t1499.99\ttrue\tN/A\t20.0\t55.0x30.0x2.5\tNegro\tN/A\ttrue
+24\tTelevision B\tLG\tN/A\tEntertainment\twebOS\t65\tN/A\tN/A\t1999.99\ttrue\tN/A\t23.0\t65.0x35.0x2.8\tNegro\tN/A\ttrue
