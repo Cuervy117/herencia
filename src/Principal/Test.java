@@ -18,6 +18,7 @@ import productos.*;
 public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Impresora impre = new Impresora("impreprueba", 400);
         Inventario.getInventario().agregarProducto(new Computadora("compu1", 200));
         Inventario.getInventario().agregarProducto(new Computadora("compu1", 200));
         Inventario.getInventario().agregarProducto(new Computadora("compu1", 200));
@@ -29,7 +30,10 @@ public class Test {
         Inventario.getInventario().agregarProducto(new Impresora("impre1", 400));
         Inventario.getInventario().agregarProducto(new Impresora("impre1", 400));
         Inventario.getInventario().agregarProducto(new Impresora("impre1", 400));
+        Inventario.getInventario().agregarProducto(impre);
+        Inventario.getInventario().agregarDescuento(impre);
         Estudiante estu1 = new Estudiante("pedro");
+        
         Inventario.getInventario().getProductos().forEach((id, producto) -> {
             System.out.println(producto.getNombre());
             estu1.agregarAlCarrito(id);
