@@ -36,6 +36,15 @@ public class Comprador {
         return null;
     }
     // Termina propuesta
+
+    public void mostrarExclusivos(Inventario inventario){
+        System.out.println("1 ) Impresoras");
+        System.out.println("2) Laptops");
+        System.out.println("3) Tablets");
+        System.out.println("4) Consolas");
+        System.out.println("5) SmartPhones");
+        
+    }
     public void setCarrito(Carrito carrito) {
         this.carrito = carrito;
     }
@@ -54,10 +63,7 @@ public class Comprador {
 
     public void agregarAlCarrito(DispositivoElectronico e){
         carrito.getProductos().add(e);
-    }
-
-    public void agregarAlCarrito(DispositivoElectronico e, int descuento){
-        carrito.getTablaPrecios().put(e, descuento);
+        
     }
 
     public void comprar(){

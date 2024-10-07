@@ -13,7 +13,7 @@ public abstract class DispositivoElectronico implements Dispositivo {
     protected int pantalla;
     protected int ram;
     protected int almacenamiento;
-    private int precio;
+    private float precio;
     private final int ID;
     
     protected String nombre;
@@ -78,7 +78,7 @@ public abstract class DispositivoElectronico implements Dispositivo {
         return nombre;
     }
     
-    public int getPrecio(){
+    public float getPrecio(){
         return precio;
     }
     // </editor-fold>
@@ -94,6 +94,10 @@ public abstract class DispositivoElectronico implements Dispositivo {
 
     public void setGama(String gama) {
         this.gama = gama;
+    }
+
+    public void setPrecio(float precio){
+        this.precio = precio;
     }
     // </editor-fold>
 

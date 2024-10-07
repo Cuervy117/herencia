@@ -3,39 +3,28 @@ package clientes;
 import java.util.ArrayList;
 import java.util.List;
 import dispositivos.DispositivoElectronico;
-import inventario.Inventario;
+import inventario.*;
+import java.util.Scanner;
 
 public class Estudiante extends Comprador {
     // propuesta David
     
     
     
-    
     // termina propuesta
-    private List<DispositivoElectronico> descuentos;
-<<<<<<< HEAD
+    //private List<DispositivoElectronico> descuentos;
     private float descuento;
-=======
-    private int descuento;
     
->>>>>>> 5445b74ed6ce2ac97134e657fd14e38a63a7c719
 
     public Estudiante(int saldo){
         super(saldo);
-        this.descuentos = new ArrayList<>();
-<<<<<<< HEAD
-        this.descuento = (float) 0.05; // Que tengan 5 por ciento o ahí vemos
-=======
-        this.descuento = 5; // Que tengan 5 por ciento o ahí vemos. 
->>>>>>> 5445b74ed6ce2ac97134e657fd14e38a63a7c719
+        this.descuento = (float) (1 - 0.05); // Que tengan 5 por ciento o ahí vemos
+
     }
 
-    public void mostrarDescuentos(){
-        descuentos.forEach(producto -> System.out.println(producto.getNombre() + " " + producto.getprecio()));
-    }
 
-    public void agregarAlCarrito(DispositivoElectronico producto){
+    public void agregarAlCarrito(DispositivoElectronico producto, float descuento){
         this.getCarrito().getProductos().add(producto);
-        producto.setPrecio(producto.getPrecio()*(1 - descuento));
+        producto.setPrecio(producto.getPrecio()*descuento);
     }
 }
