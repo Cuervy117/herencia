@@ -2,16 +2,16 @@ package clientes;
 
 import dispositivos.DispositivoElectronico;
 import inventario.Inventario;
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Comprador {
-    // propuesta David
-    private HashMap<Integer, DispositivoElectronico> productosDescuentosExclusivos;
-    // termina propuesta
+public abstract class Comprador {
+    protected HashMap<Integer, DispositivoElectronico> productos = new HashMap<>();
+    private ArrayList<Carrito> tickets;
+    
     private Carrito carrito;
     private int saldo;
     
-    //private ArrayList<Carrito> tickets;
     public Comprador(int saldo){
         this.saldo = saldo;
         this.carrito = new Carrito();
