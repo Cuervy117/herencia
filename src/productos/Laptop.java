@@ -16,6 +16,9 @@ public class Laptop extends DispositivoMovil {
         super(autonomia, peso, dimensiones, color, aprueba_de_agua_polvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
     }
 
+    public Laptop(String nombre, int precio){
+        super(nombre, precio);
+    }
     
     @Override
     public void encender() {

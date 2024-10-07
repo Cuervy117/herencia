@@ -16,7 +16,9 @@ public class ConsolaPortable extends DispositivoMovil {
         super(autonomia, peso, dimensiones, color, aprueba_de_agua_polvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
     }
 
-    
+    public ConsolaPortable(String nombre, int precio){
+        super(nombre, precio);
+    }
     @Override
     public void encender() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

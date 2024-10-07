@@ -16,6 +16,9 @@ public class Consola extends DispositivoEstacionario {
         super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
     }
 
+    public Consola(String nombre, int precio){
+        super(nombre, precio);
+    }
     
     @Override
     public void encender() {

@@ -26,6 +26,10 @@ public abstract class DispositivoMovil extends DispositivoElectronico {
         this.aprueba_de_agua_polvo = aprueba_de_agua_polvo;
     }
     
+    public DispositivoMovil(String nombre, int precio){
+        super(nombre, precio);
+    }
+    
     // <editor-fold defaultstate="collapsed" desc="Getters">
     public int getAutonomia() {
         return autonomia;

@@ -16,25 +16,28 @@ public class Television extends DispositivoEstacionario {
         super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
     }
 
+    public Television(String nombre, int precio) {
+        super(nombre, precio);
+    }
     
     @Override
     public void encender() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Encendiendo television...");
     }
 
     @Override
     public void apagar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Apagando television...");
     }
 
     @Override
     public void reparar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Reparando television...");
     }
 
     @Override
     public void reiniciar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Reiniciar television...");
     }
     
 }

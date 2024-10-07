@@ -16,7 +16,9 @@ public class Impresora extends DispositivoEstacionario {
         super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
     }
     
-    
+    public Impresora(String nombre, int precio){
+        super(nombre, precio);
+    }
     @Override
     public void encender() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

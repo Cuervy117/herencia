@@ -12,29 +12,32 @@ import dispositivos.tipos.DispositivoEstacionario;
  */
 public class ReproductorVideo extends DispositivoEstacionario {
 
+    public ReproductorVideo(int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo, String instalacion) {
+        super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
+    }
+
+    public ReproductorVideo(String nombre, int precio) {
+        super(nombre, precio);
+    }
+    
     @Override
     public void encender() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Encendiendo Reproductor...");
     }
 
     @Override
     public void apagar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Apagando Reproductor...");
     }
 
     @Override
     public void reparar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Reparando Reproductor...");
     }
 
     @Override
     public void reiniciar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Reiniciando Reproductor...");
     }
-
-    public ReproductorVideo(int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo, String instalacion) {
-        super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
-    }
-    
     
 }

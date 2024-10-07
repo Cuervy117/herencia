@@ -17,7 +17,9 @@ public abstract class DispositivoEstacionario extends DispositivoElectronico {
         super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
         this.instalacion = instalacion;
     }
-    
+    public DispositivoEstacionario(String nombre, int precio){
+        super(nombre, precio);
+    }
     public String getInstalacion(){
         return instalacion;
     }
