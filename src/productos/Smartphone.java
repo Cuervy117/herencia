@@ -12,14 +12,15 @@ import dispositivos.tipos.DispositivoMovil;
  */
 public class Smartphone extends DispositivoMovil {
 
-    public Smartphone(int autonomia, int peso, String dimensiones, String color, boolean aprueba_de_agua_polvo, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
-        super(autonomia, peso, dimensiones, color, aprueba_de_agua_polvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
+    public Smartphone(int precio, int autonomia, int peso, String dimensiones, String color, boolean aprueba_de_agua_polvo, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
+        super(precio, autonomia, peso, dimensiones, color, aprueba_de_agua_polvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
     }
 
     public Smartphone(String nombre, int precio) {
         super(nombre, precio);
-    }  
-    
+    }
+
+ 
     @Override
     public void encender() {
         System.out.println("Encendiendo celular...");

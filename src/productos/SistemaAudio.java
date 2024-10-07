@@ -12,13 +12,15 @@ import dispositivos.tipos.DispositivoEstacionario;
  */
 public class SistemaAudio extends DispositivoEstacionario {
 
-    public SistemaAudio(int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo, String instalacion) {
-        super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
+    public SistemaAudio(int precio, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo, String instalacion) {
+        super(precio, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
     }
 
     public SistemaAudio(String nombre, int precio) {
         super(nombre, precio);
     }
+
+
     
     @Override
     public void encender() {

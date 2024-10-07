@@ -12,14 +12,14 @@ import dispositivos.tipos.DispositivoMovil;
  */
 public class Smartwatch extends DispositivoMovil {
 
-    public Smartwatch(int autonomia, int peso, String dimensiones, String color, boolean aprueba_de_agua_polvo, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
-        super(autonomia, peso, dimensiones, color, aprueba_de_agua_polvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
+    public Smartwatch(int precio, int autonomia, int peso, String dimensiones, String color, boolean aprueba_de_agua_polvo, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
+        super(precio, autonomia, peso, dimensiones, color, aprueba_de_agua_polvo, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
     }
 
     public Smartwatch(String nombre, int precio) {
         super(nombre, precio);
     }
-
+    
     @Override
     public void encender() {
         System.out.println("Encendiendo reloj...");

@@ -12,11 +12,11 @@ import dispositivos.tipos.DispositivoEstacionario;
  */
 public class Consola extends DispositivoEstacionario {
 
-    public Consola(int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo, String instalacion) {
-        super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
+    public Consola(int precio, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo, String instalacion) {
+        super(precio, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
     }
 
-    public Consola(String nombre, int precio){
+    public Consola(String nombre, int precio) {
         super(nombre, precio);
     }
     
