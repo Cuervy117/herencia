@@ -26,8 +26,17 @@ public class Estudiante extends Comprador {
         double[] total = {0};
         System.out.println("Generando ticket de " + this.getNombre() + "...");
         System.out.println("Producto    Precio      Descuento");
-        carrito.forEach(producto -> System.out.println(producto.getNombre() + "     " + producto.getPrecio() + "    -" + (Inventario.getInventario().getDescuentosParaEstudiantes().containsKey(producto.getID())? producto.getPrecio()*descuento : 0)));
-        carrito.forEach(producto -> {total[0] += (Inventario.getInventario().getDescuentosParaEstudiantes().containsKey(producto.getID())? producto.getPrecio() - producto.getPrecio()*descuento : producto.getPrecio());});
+        carrito.forEach(producto -> {
+            boolean contenidoEnDesEstudiantes = Inventario.getInventario().getDescuentosParaEstudiantes().containsKey(producto.getID());
+            boolean contenidoEnDesRegulares = Inventario.getInventario().getDescuentos().containsKey(producto.getID());
+            System.out.println(producto.getNombre() + "     " + producto.getPrecio() + "    -" + ((contenidoEnDesEstudiantes? producto.getPrecio()*descuento : 0) + (contenidoEnDesRegulares? producto.getPrecio()*descuentoDeTemporada : 0)));
+        });
+        carrito.forEach(producto -> {
+            boolean contenidoEnDesEstudiantes = Inventario.getInventario().getDescuentosParaEstudiantes().containsKey(producto.getID());
+            boolean contenidoEnDesRegulares = Inventario.getInventario().getDescuentos().containsKey(producto.getID());
+            double precioConDescuento = producto.getPrecio() - producto.getPrecio()*descuento  - (producto.getPrecio() * (contenidoEnDesRegulares? descuentoDeTemporada: 0));
+            total[0] += (contenidoEnDesEstudiantes? precioConDescuento : producto.getPrecio());
+        });
         System.out.println("Total:      " + total[0]);
         
     }
