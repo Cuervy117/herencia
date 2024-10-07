@@ -65,7 +65,16 @@ public abstract class Comprador {
         System.out.println("12   --- Relojes inteligentes");
         System.out.println("13   --- Salir");
     }
-    public static void menuDeProductos(Scanner sc){
+    public static void menuDeProductos(Scanner sc, String nomCliente, String tipoCliente){
+        Comprador cliente;
+        System.out.println(tipoCliente);
+        switch (tipoCliente) {
+            case "Estudiante" -> cliente = new Estudiante(nomCliente);
+            case "Regular" -> cliente = new Regular(nomCliente);
+            case "VIP" -> cliente = new VIP(nomCliente);
+            default -> cliente = new Regular(nomCliente);
+        }
+        System.out.println(cliente);
         int opcion;
         do{
             imprimirTiposDeProductos();
@@ -121,8 +130,34 @@ public abstract class Comprador {
                 case 13 -> {
                     System.out.println("Saliendo del menu de productos...");
                 }
+                default ->{
+                    if(!Inventario.getInventario().getProductos().containsKey(opcion)) {
+                        System.out.println("Articulo invalido");
+                        continue;
+                    }
+                    cliente.agregarAlCarrito(opcion);
+                }
             }
         }while(opcion != 13);
+        if(cliente instanceof VIP){
+            System.out.println("Antes de que termine, vea nuestros productos exclusivos para usted");
+                    System.out.println("Ingrese No si desea terminar su compra");
+                    String vip;
+                    boolean condicion = true;
+                    do{
+                        Inventario.getInventario().getProductosVIP().forEach((id, producto) -> System.out.println("ID: " + producto.getID() + " Nombre: " + producto.getNombre() + "   Precio: " + producto.getPrecio()));
+                        vip = sc.nextLine();
+                        if(vip.equals("No") || vip.equals("no") || vip.equals("NO")){
+                            
+                            condicion = false;
+                            break;
+                        }
+                        if(Inventario.getInventario().getProductosVIP().containsKey(Integer.valueOf(vip))) {
+                            cliente.agregarAlCarrito(Integer.valueOf(vip));
+                        }
+                    }while(condicion);
+        }
+        cliente.comprar();
     }
 
 }
