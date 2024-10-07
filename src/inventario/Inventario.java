@@ -12,14 +12,62 @@ import dispositivos.DispositivoElectronico;
  */
 public class Inventario {
     
-    private HashMap<Integer, DispositivoElectronico> productos;
+    private static Inventario inventario;
+    private HashMap<Integer, DispositivoElectronico> productos = new HashMap<>();
+    private HashMap<Integer, DispositivoElectronico> productosVIP = new HashMap<>();
     
-    public Inventario(){
-        this.productos = new HashMap<>();
+    private HashMap<Integer, DispositivoElectronico> descuentos = new HashMap<>();
+    private HashMap<Integer, DispositivoElectronico> descuentosParaEstudiante = new HashMap<>();
+    
+    public Inventario(){}
+    
+    public static Inventario getInventario(){
+        if(inventario == null){
+            inventario = new Inventario();
+        }
+        return inventario;
     }
     
     public void agregarProducto(DispositivoElectronico nuevoProducto){
-        productos.put(nuevoProducto.getID(), nuevoProducto);
+        if(nuevoProducto.getGama().equals("Alta")){
+            productosVIP.put(nuevoProducto.getID(), nuevoProducto);
+        }else{
+            productos.put(nuevoProducto.getID(), nuevoProducto);
+            if(nuevoProducto instanceof Impresora || nuevoProducto instanceof Laptop || nuevoProducto instanceof Tablet || nuevoProducto instanceof Smartphone){
+                descuentosParaEstudiante.put(nuevoProducto.getID(), nuevoProducto);
+            }
+        }
+    }
+    
+    public void agregarDescuento(DispositivoElectronico nuevoDescuento){
+        descuentos.put(nuevoDescuento.getID(), nuevoDescuento);
+    }
+    
+    public void eliminarProducto(DispositivoElectronico productoAEliminar){
+        productos.remove(productoAEliminar.getID());
+        if(descuentosParaEstudiante.containsKey(productoAEliminar.getID())) descuentosParaEstudiante.remove(productoAEliminar.getID());
+        if(descuentos.containsKey(productoAEliminar.getID())) descuentos.remove(productoAEliminar.getID());
+    }
+    
+    public void eliminarDescuento(DispositivoElectronico descuentoAEliminar){
+        descuentos.remove(descuentoAEliminar.getID());
+    }
+    
+    // <editor-fold defaultstate="collapsed" desc="Getters">
+    public HashMap<Integer, DispositivoElectronico> getProductos(){
+        return productos;
+    }
+    
+    public HashMap<Integer, DispositivoElectronico> getProductosVIP(){
+        return productosVIP;
+    }
+    
+    public HashMap<Integer, DispositivoElectronico> getDescuentos(){
+        return descuentos;
+    }
+    
+    public HashMap<Integer, DispositivoElectronico> getDescuentosParaEstudiantes(){
+        return descuentosParaEstudiante;
     }
     
     public HashMap<Integer,DispositivoElectronico> getCamarasDigitales(){
@@ -141,5 +189,5 @@ public class Inventario {
         }
         return televisiones;
     }
-
+    // </editor-fold>
 }

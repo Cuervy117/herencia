@@ -4,24 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import dispositivos.DispositivoElectronico;
 import inventario.Inventario;
+import java.util.HashMap;
 
 public class Estudiante extends Comprador {
-    // propuesta David
-    
-    
-    
-    
-    // termina propuesta
-    private List<DispositivoElectronico> descuentos;
-    private int descuento;
+    private ArrayList<DispositivoElectronico> descuentos;
+    private static int descuento = 5;
     
 
     public Estudiante(int saldo){
         super(saldo);
         this.descuentos = new ArrayList<>();
-        this.descuento = 5; // Que tengan 5 por ciento o ahí vemos. 
+        this.productos = Inventario.getInventario().getProductos();
     }
-
+    
     public void mostrarDescuentos(){
         descuentos.forEach(producto -> System.out.println(producto.getNombre() + " " + producto.getprecio()));
     }
