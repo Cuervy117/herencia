@@ -12,10 +12,13 @@ import dispositivos.tipos.DispositivoEstacionario;
  */
 public class Computadora extends DispositivoEstacionario {
 
-    public Computadora(int pantalla, int ram, int almacenamiento, String nombre, String marca, 
-    String procesador, String gama, String sistemaOperativo, String instalacion) {
-super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
-}
+    public Computadora(int precio, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo, String instalacion) {
+        super(precio, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo, instalacion);
+    }
+
+    public Computadora(String nombre, int precio) {
+        super(nombre, precio);
+    }
 
     
     @Override

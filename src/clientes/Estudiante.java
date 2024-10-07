@@ -1,30 +1,34 @@
 package clientes;
 
-import java.util.ArrayList;
-import java.util.List;
-import dispositivos.DispositivoElectronico;
 import inventario.*;
-import java.util.Scanner;
 
 public class Estudiante extends Comprador {
-    // propuesta David
     
-    
-    
-    // termina propuesta
-    //private List<DispositivoElectronico> descuentos;
-    private float descuento;
+    private final double descuento = 0.05;
     
 
-    public Estudiante(int saldo){
-        super(saldo);
-        this.descuento = (float) (1 - 0.05); // Que tengan 5 por ciento o ahí vemos
-
+    public Estudiante(String nombre){
+        super(nombre);
+        this.productos = Inventario.getInventario().getProductos();
     }
-
-
-    public void agregarAlCarrito(DispositivoElectronico producto, float descuento){
-        this.getCarrito().getProductos().add(producto);
-        producto.setPrecio(producto.getPrecio()*descuento);
+    
+    public Estudiante(String nombre, int saldo){
+        super(nombre, saldo);
+        this.productos = Inventario.getInventario().getProductos();       
+    }
+    
+    public void mostrarDescuentos(){
+        Inventario.getInventario().getDescuentosParaEstudiantes().forEach((id, producto) -> System.out.println("Producto con ID: " + id + " " + producto.getNombre() + " de precio " + producto.getPrecio() + " ahora en " + (producto.getPrecio() - producto.getPrecio()*descuento)));
+    }
+    
+    @Override
+    public void comprar(){
+        double[] total = {0};
+        System.out.println("Generando ticket de " + this.getNombre() + "...");
+        System.out.println("Producto    Precio      Descuento");
+        carrito.forEach(producto -> System.out.println(producto.getNombre() + "     " + producto.getPrecio() + "    -" + (Inventario.getInventario().getDescuentosParaEstudiantes().containsKey(producto.getID())? producto.getPrecio()*descuento : 0)));
+        carrito.forEach(producto -> {total[0] += (Inventario.getInventario().getDescuentosParaEstudiantes().containsKey(producto.getID())? producto.getPrecio() - producto.getPrecio()*descuento : producto.getPrecio());});
+        System.out.println("Total:      " + total[0]);
+        
     }
 }

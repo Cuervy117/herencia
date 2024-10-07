@@ -17,13 +17,17 @@ public abstract class DispositivoMovil extends DispositivoElectronico {
     protected String color;
     protected boolean aprueba_de_agua_polvo;
 
-    public DispositivoMovil(int autonomia, int peso, String dimensiones, String color, boolean aprueba_de_agua_polvo, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
-        super(pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
+    public DispositivoMovil(int precio, int autonomia, int peso, String dimensiones, String color, boolean aprueba_de_agua_polvo, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
+        super(precio, pantalla, ram, almacenamiento, nombre, marca, procesador, gama, sistemaOperativo);
         this.autonomia = autonomia;
         this.peso = peso;
         this.dimensiones = dimensiones;
         this.color = color;
         this.aprueba_de_agua_polvo = aprueba_de_agua_polvo;
+    }
+    
+    public DispositivoMovil(String nombre, int precio){
+        super(nombre, precio);
     }
     
     // <editor-fold defaultstate="collapsed" desc="Getters">

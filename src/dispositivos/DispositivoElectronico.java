@@ -23,8 +23,14 @@ public abstract class DispositivoElectronico implements Dispositivo {
     protected String sistemaOperativo;
     private boolean funcional = true;
    
-
-    public DispositivoElectronico(int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
+    public DispositivoElectronico(String nombre, int precio){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.gama = "sin gama";
+        this.ID = this.hashCode();
+    }
+    
+    public DispositivoElectronico(int precio, int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
         this.pantalla = pantalla;
         this.ram = ram;
         this.almacenamiento = almacenamiento;
@@ -34,6 +40,7 @@ public abstract class DispositivoElectronico implements Dispositivo {
         this.procesador = procesador;
         this.gama = gama;
         this.sistemaOperativo = sistemaOperativo;
+        this.precio = precio;
     }
 
     // <editor-fold defaultstate="collapsed" desc="Getteres">
@@ -81,6 +88,7 @@ public abstract class DispositivoElectronico implements Dispositivo {
     public float getPrecio(){
         return precio;
     }
+    
     // </editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc="Setters">
