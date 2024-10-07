@@ -3,6 +3,7 @@ package clientes;
 import dispositivos.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+
 public class Carrito {
     private ArrayList<DispositivoElectronico> productos;
     private LinkedHashMap<DispositivoElectronico, Integer> tablaPrecios;
@@ -41,7 +42,5 @@ public class Carrito {
     public void verCarrito(){
         tablaPrecios.forEach((dispositivo, precio) -> System.out.println(dispositivo.getNombre() + " - " + precio + " $") );
     }
-
-
 
 }

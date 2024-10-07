@@ -13,6 +13,7 @@ public abstract class DispositivoElectronico implements Dispositivo {
     protected int pantalla;
     protected int ram;
     protected int almacenamiento;
+    private int precio;
     private final int ID;
     
     protected String nombre;
@@ -20,6 +21,8 @@ public abstract class DispositivoElectronico implements Dispositivo {
     protected String procesador;
     private String gama;
     protected String sistemaOperativo;
+    private boolean funcional = true;
+   
 
     public DispositivoElectronico(int pantalla, int ram, int almacenamiento, String nombre, String marca, String procesador, String gama, String sistemaOperativo) {
         this.pantalla = pantalla;
@@ -73,6 +76,10 @@ public abstract class DispositivoElectronico implements Dispositivo {
     
     public String getNombre() {
         return nombre;
+    }
+    
+    public int getPrecio(){
+        return precio;
     }
     // </editor-fold>
     
