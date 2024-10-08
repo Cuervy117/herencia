@@ -106,12 +106,7 @@ public class Archivo{
     }
     
     
-    public static void main(String[] args)throws IOException {
-        Inventario inventario = new Inventario();
-        almacenarProductos(inventario);
-        System.out.println("Ya se ejecutó");
-        inventario.getProductos().forEach((id, producto )-> System.out.println(id + " - " + producto.getNombre()));
-    }
+
 
 
 }
