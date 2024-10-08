@@ -4,8 +4,10 @@
  */
 package Principal;
 
+import inventario.Inventario;
 import java.io.IOException;
 import java.util.Scanner;
+import productos.CamaraDigital;
 
 /**
  *
@@ -14,6 +16,7 @@ import java.util.Scanner;
 public class Principal {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
+        Inventario.getInventario().agregarDescuento(new CamaraDigital("Camara generica", 200));
         Menu.ejecutarMenu(sc);
     }
 }

@@ -99,7 +99,6 @@ public class Archivo{
                             case "Television" -> new Television(precio, pantalla, ram, almacenamiento, nombre, marca, procesador, 
                                     gama, sistemaOperativo, instalacion);
                             default -> {
-                                System.out.println("Tipo de producto desconocido para: " + nombre);
                                 yield null; // Retorna null si no se encuentra un tipo válido
                             }
                         };
@@ -109,9 +108,7 @@ public class Archivo{
                         if (nuevoProducto != null) {
                             // Agrega el nuevo producto al inventario
                             inventario.agregarProducto(nuevoProducto);
-                            System.out.println("Producto agregado: " + nombre +" " + nuevoProducto);
                         } else {
-                            System.out.println("Tipo de producto desconocido para: " + nombre);
                         }
                     }
                 } catch (IOException e) {

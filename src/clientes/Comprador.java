@@ -50,7 +50,7 @@ public abstract class Comprador {
         this.saldo = saldo;
     }
     
-    public static void imprimirTiposDeProductos(){
+    public static void imprimirTiposDeProductos(String tipoCliente){
         System.out.println("1   --- Camaras digitales");
         System.out.println("2   --- Computadoras");
         System.out.println("3   --- Consolas");
@@ -63,21 +63,24 @@ public abstract class Comprador {
         System.out.println("10   --- Tablet's");
         System.out.println("11   --- Televisiones");
         System.out.println("12   --- Relojes inteligentes");
-        System.out.println("13   --- Salir");
+        if(tipoCliente.equals("VIP")) {
+            System.out.println("13  --- Productos Exclusivos");
+            System.out.println("14  --- Comprar");
+        }else{
+        System.out.println("13   --- Comprar");
+        }
     }
     public static void menuDeProductos(Scanner sc, String nomCliente, String tipoCliente){
         Comprador cliente;
-        System.out.println(tipoCliente);
         switch (tipoCliente) {
             case "Estudiante" -> cliente = new Estudiante(nomCliente);
             case "Regular" -> cliente = new Regular(nomCliente);
             case "VIP" -> cliente = new VIP(nomCliente);
             default -> cliente = new Regular(nomCliente);
         }
-        System.out.println(cliente);
         int opcion;
         do{
-            imprimirTiposDeProductos();
+            imprimirTiposDeProductos(tipoCliente);
             opcion = Integer.parseInt(sc.nextLine());
             switch(opcion){
                 case 1 -> {
@@ -128,18 +131,27 @@ public abstract class Comprador {
 
                 }
                 case 13 -> {
-                    System.out.println("Saliendo del menu de productos...");
+                    if(tipoCliente.equals("VIP")){
+                        Inventario.getInventario().getProductosVIP().forEach((id, producto) -> System.out.println("ID: " + id + " Nombre: " + producto.getNombre() + " Precio: " + producto.getPrecio()));
+                        opcion = 1;
+                    }
+                }
+                case 14 -> {
+                    opcion = 13;
                 }
                 default ->{
-                    if(!Inventario.getInventario().getProductos().containsKey(opcion)) {
+                    if(!Inventario.getInventario().getProductos().containsKey(opcion) && !(cliente instanceof VIP)) {
                         System.out.println("Articulo invalido");
                         continue;
                     }
                     cliente.agregarAlCarrito(opcion);
+                    System.out.println("Articulo guardado");
                 }
             }
         }while(opcion != 13);
-        if(cliente instanceof VIP){
+        System.out.println("Procesando compra...");
+
+        /*if(cliente instanceof VIP){
             System.out.println("Antes de que termine, vea nuestros productos exclusivos para usted");
                     System.out.println("Ingrese No si desea terminar su compra");
                     String vip;
@@ -156,7 +168,7 @@ public abstract class Comprador {
                             cliente.agregarAlCarrito(Integer.valueOf(vip));
                         }
                     }while(condicion);
-        }
+        }*/
         cliente.comprar();
     }
 

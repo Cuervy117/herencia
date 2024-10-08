@@ -40,6 +40,7 @@ public class Inventario {
     }
     
     public void agregarDescuento(DispositivoElectronico nuevoDescuento){
+        productos.put(nuevoDescuento.getID(), nuevoDescuento);
         descuentos.put(nuevoDescuento.getID(), nuevoDescuento);
     }
     
